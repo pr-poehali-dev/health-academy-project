@@ -131,12 +131,19 @@ export default function Index() {
             ))}
           </div>
 
-          <button
-            onClick={() => scrollTo("contacts")}
-            className="gradient-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg hover:shadow-teal-300/50 hover:scale-105 transition-all duration-300"
-          >
-            Записаться
-          </button>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => scrollTo("contacts")}
+              className="gradient-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg hover:shadow-teal-300/50 hover:scale-105 transition-all duration-300"
+            >
+              Записаться
+            </button>
+            <img
+              src="https://cdn.poehali.dev/projects/0826e624-b74a-490d-b150-fc542ba5dad2/bucket/b3b9574d-fdd0-4a1a-873c-b550983f5c5d.jpg"
+              alt="ЦГКБ №3 Екатеринбург"
+              className="h-12 w-12 object-contain rounded-lg"
+            />
+          </div>
         </div>
       </nav>
 
