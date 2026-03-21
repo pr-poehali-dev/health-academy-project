@@ -102,13 +102,16 @@ export default function Index() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          <button onClick={() => scrollTo("home")} className="flex items-center gap-2 group">
-            <div className="w-9 h-9 gradient-primary rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
-              <span className="text-white text-lg">🏥</span>
-            </div>
+          <button onClick={() => scrollTo("home")} className="flex items-center gap-3 group">
+            <img
+              src="https://cdn.poehali.dev/projects/0826e624-b74a-490d-b150-fc542ba5dad2/bucket/b3b9574d-fdd0-4a1a-873c-b550983f5c5d.jpg"
+              alt="ЦГКБ №3"
+              className="h-11 w-11 object-contain rounded-xl group-hover:scale-105 transition-transform"
+            />
+            <div className="w-px h-8 bg-slate-200" />
             <div className="leading-none">
-              <div className="font-display text-lg font-bold text-slate-800">Академия</div>
-              <div className="text-[10px] font-semibold text-teal-600 tracking-widest uppercase">Здоровья</div>
+              <div className="font-display text-lg font-bold text-slate-800">Академия здоровья</div>
+              <div className="text-[10px] font-semibold text-teal-600 tracking-widest uppercase">ЦГКБ №3 · Екатеринбург</div>
             </div>
           </button>
 
@@ -131,19 +134,12 @@ export default function Index() {
             ))}
           </div>
 
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => scrollTo("contacts")}
-              className="gradient-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg hover:shadow-teal-300/50 hover:scale-105 transition-all duration-300"
-            >
-              Записаться
-            </button>
-            <img
-              src="https://cdn.poehali.dev/projects/0826e624-b74a-490d-b150-fc542ba5dad2/bucket/b3b9574d-fdd0-4a1a-873c-b550983f5c5d.jpg"
-              alt="ЦГКБ №3 Екатеринбург"
-              className="h-12 w-12 object-contain rounded-lg"
-            />
-          </div>
+          <button
+            onClick={() => scrollTo("contacts")}
+            className="gradient-primary text-white text-sm font-semibold px-5 py-2.5 rounded-full shadow-lg hover:shadow-teal-300/50 hover:scale-105 transition-all duration-300"
+          >
+            Записаться
+          </button>
         </div>
       </nav>
 
