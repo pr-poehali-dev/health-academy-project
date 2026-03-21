@@ -141,82 +141,94 @@ export default function Index() {
       </nav>
 
       {/* HERO */}
-      <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-teal-900 to-indigo-900" />
-          <img
-            src={HERO_IMAGE}
-            alt="Академия здоровья"
-            className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-30"
-          />
-          <div className="absolute top-20 right-20 w-96 h-96 bg-teal-400/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-20 left-10 w-72 h-72 bg-indigo-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-          <div className="absolute top-1/2 left-1/2 w-48 h-48 bg-cyan-300/10 rounded-full blur-2xl" />
+      <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-10 right-0 w-[600px] h-[600px] bg-teal-100/60 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-indigo-100/50 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+          <div className="absolute top-1/3 left-1/3 w-72 h-72 bg-cyan-100/40 rounded-full blur-2xl" />
         </div>
 
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: "linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)",
+            backgroundImage: "linear-gradient(rgba(14,165,160,1) 1px, transparent 1px), linear-gradient(90deg, rgba(14,165,160,1) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
           }}
         />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20">
-          <div className="max-w-3xl">
-            <div className="animate-fade-up inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
-              <span className="pulse-dot w-2 h-2 bg-green-400 rounded-full inline-block" />
-              <span className="text-white/90 text-sm font-medium">Приём записей открыт</span>
-            </div>
-
-            <h1 className="animate-fade-up-delay-1 font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.95] mb-6">
-              Академия
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-cyan-300 to-indigo-300">
-                Здоровья
-              </span>
-            </h1>
-
-            <p className="animate-fade-up-delay-2 text-white/75 text-lg md:text-xl leading-relaxed mb-4 max-w-xl">
-              Уважаемые пациенты, приглашаем Вас посетить уникальный образовательный проект на базе нашей поликлиники.
-            </p>
-            <p className="animate-fade-up-delay-2 text-white/60 text-base mb-10 max-w-xl">
-              4 программы обучения · Очный формат · Именной сертификат по итогам
-            </p>
-
-            <div className="animate-fade-up-delay-3 flex flex-wrap gap-4">
-              <button
-                onClick={() => scrollTo("programs")}
-                className="gradient-primary text-white font-bold px-8 py-4 rounded-2xl shadow-xl hover:shadow-teal-400/40 hover:scale-105 transition-all duration-300 text-base"
-              >
-                Выбрать программу
-              </button>
-              <button
-                onClick={() => scrollTo("schedule")}
-                className="bg-white/10 border border-white/30 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-2xl hover:bg-white/20 transition-all duration-300 text-base"
-              >
-                Расписание →
-              </button>
-            </div>
-          </div>
-
-          <div className="animate-fade-up-delay-4 mt-16 grid grid-cols-3 gap-6 max-w-lg">
-            {[
-              { num: "4", label: "Направления" },
-              { num: "2 ч", label: "Каждое занятие" },
-              { num: "🎓", label: "Сертификат" },
-            ].map((s) => (
-              <div key={s.label} className="text-center bg-white/10 border border-white/15 backdrop-blur-sm rounded-2xl py-4 px-3">
-                <div className="font-display text-3xl font-bold text-white">{s.num}</div>
-                <div className="text-white/60 text-xs mt-1 font-medium">{s.label}</div>
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="animate-fade-up inline-flex items-center gap-2 bg-teal-50 border border-teal-200 rounded-full px-4 py-2 mb-8">
+                <span className="pulse-dot w-2 h-2 bg-green-500 rounded-full inline-block" />
+                <span className="text-teal-700 text-sm font-semibold">Приём записей открыт</span>
               </div>
-            ))}
+
+              <h1 className="animate-fade-up-delay-1 font-display text-6xl md:text-7xl lg:text-7xl font-bold text-slate-800 leading-[0.95] mb-6">
+                Академия
+                <br />
+                <span className="gradient-text">Здоровья</span>
+              </h1>
+
+              <p className="animate-fade-up-delay-2 text-slate-600 text-lg md:text-xl leading-relaxed mb-4 max-w-xl">
+                Уважаемые пациенты, приглашаем Вас посетить уникальный образовательный проект на базе нашей поликлиники.
+              </p>
+              <p className="animate-fade-up-delay-2 text-slate-400 text-base mb-10 max-w-xl">
+                4 программы обучения · Очный формат · Именной сертификат по итогам
+              </p>
+
+              <div className="animate-fade-up-delay-3 flex flex-wrap gap-4">
+                <button
+                  onClick={() => scrollTo("programs")}
+                  className="gradient-primary text-white font-bold px-8 py-4 rounded-2xl shadow-lg hover:shadow-teal-300/50 hover:scale-105 transition-all duration-300 text-base"
+                >
+                  Выбрать программу
+                </button>
+                <button
+                  onClick={() => scrollTo("schedule")}
+                  className="bg-white border border-slate-200 text-slate-700 font-semibold px-8 py-4 rounded-2xl hover:border-teal-300 hover:text-teal-700 transition-all duration-300 text-base shadow-sm"
+                >
+                  Расписание →
+                </button>
+              </div>
+
+              <div className="animate-fade-up-delay-4 mt-12 grid grid-cols-3 gap-4 max-w-md">
+                {[
+                  { num: "4", label: "Направления" },
+                  { num: "2 ч", label: "Каждое занятие" },
+                  { num: "🎓", label: "Сертификат" },
+                ].map((s) => (
+                  <div key={s.label} className="text-center bg-white border border-slate-100 rounded-2xl py-4 px-3 shadow-sm">
+                    <div className="font-display text-3xl font-bold gradient-text">{s.num}</div>
+                    <div className="text-slate-500 text-xs mt-1 font-medium">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="hidden lg:block relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-teal-100/50">
+                <img
+                  src={HERO_IMAGE}
+                  alt="Академия здоровья"
+                  className="w-full h-[520px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-teal-900/30 to-transparent" />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3 border border-slate-100">
+                <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-xl">✅</div>
+                <div>
+                  <div className="font-bold text-slate-800 text-sm">Обучение бесплатно</div>
+                  <div className="text-slate-400 text-xs">для пациентов поликлиники</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-          <span className="text-white/40 text-xs tracking-widest uppercase">Листайте</span>
-          <Icon name="ChevronDown" size={20} className="text-white/40" />
+          <span className="text-slate-400 text-xs tracking-widest uppercase">Листайте</span>
+          <Icon name="ChevronDown" size={20} className="text-slate-400" />
         </div>
       </section>
 
