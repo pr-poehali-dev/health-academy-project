@@ -452,6 +452,37 @@ export default function Index() {
         </div>
       </section>
 
+      {/* БОЛЬНИЧНЫЙ ЛИСТ */}
+      <section className="py-16 px-6 bg-amber-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white border border-amber-200 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start shadow-sm">
+            <div className="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center shrink-0">
+              <Icon name="FileText" size={26} className="text-amber-600" />
+            </div>
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 text-xs font-semibold uppercase tracking-wider rounded-full px-3 py-1 mb-4">
+                Важная информация
+              </div>
+              <h3 className="font-display text-2xl font-bold text-slate-800 mb-4">Больничный лист</h3>
+              <p className="text-slate-700 leading-relaxed mb-3">
+                Уважаемые пациенты! Если у Вас есть вопросы по поводу закрытия или продления больничного листа, пожалуйста, обратитесь к Вашему лечащему врачу или позвоните в Call-центр — мы быстро решим проблему.
+              </p>
+              <p className="text-slate-500 leading-relaxed mb-6">
+                Портал «Госуслуги» не связан с рабочей программой поликлиники, в связи с этим вся информация по Вашему больничному листу может приходить с опозданием.
+              </p>
+              <a
+                href="tel:83432722795"
+                className="inline-flex items-center gap-3 bg-amber-50 border border-amber-200 hover:border-amber-400 hover:bg-amber-100 transition-all rounded-2xl px-6 py-3"
+              >
+                <Icon name="Phone" size={18} className="text-amber-600" />
+                <span className="font-bold text-slate-800">8-343-272-27-95</span>
+                <span className="text-slate-500 text-sm">Call-центр</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer className="bg-slate-900 text-white py-10 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
