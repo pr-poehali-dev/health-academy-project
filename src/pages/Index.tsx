@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
+import AnnouncementSection from "@/components/AnnouncementSection";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/0826e624-b74a-490d-b150-fc542ba5dad2/files/8fa4c9a3-e493-4b8c-bd75-3e4c8545485c.jpg";
 
@@ -452,62 +453,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* БОЛЬНИЧНЫЙ ЛИСТ */}
-      <section className="py-24 px-6 bg-amber-50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-amber-100 border border-amber-200 text-amber-700 text-sm font-semibold uppercase tracking-wider rounded-full px-5 py-2 mb-5">
-              <Icon name="FileText" size={15} className="text-amber-600" />
-              Важная информация
-            </div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-800">
-              Больничный <span className="text-amber-500">лист</span>
-            </h2>
-          </div>
-
-          <div className="bg-white border border-amber-200 rounded-3xl shadow-sm overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-amber-100">
-              <div className="p-10 md:p-12">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
-                    <Icon name="UserCheck" size={20} className="text-amber-600" />
-                  </div>
-                  <div className="font-bold text-slate-800 text-lg">Вопросы по больничному</div>
-                </div>
-                <p className="text-slate-700 text-lg leading-relaxed">
-                  Уважаемые пациенты! Если у Вас есть вопросы по поводу закрытия или продления больничного листа, пожалуйста, обратитесь к Вашему лечащему врачу или позвоните в Call-центр — мы быстро решим проблему.
-                </p>
-              </div>
-
-              <div className="p-10 md:p-12">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
-                    <Icon name="Info" size={20} className="text-amber-600" />
-                  </div>
-                  <div className="font-bold text-slate-800 text-lg">Портал «Госуслуги»</div>
-                </div>
-                <p className="text-slate-700 text-lg leading-relaxed">
-                  Портал «Госуслуги» не связан с рабочей программой поликлиники, в связи с этим вся информация по Вашему больничному листу может приходить с опозданием.
-                </p>
-              </div>
-            </div>
-
-            <div className="border-t border-amber-100 bg-amber-50 px-10 md:px-12 py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-              <p className="text-slate-600 text-lg font-medium">Спасибо за Ваше внимание и понимание!</p>
-              <a
-                href="tel:83432722795"
-                className="inline-flex items-center gap-3 bg-white border border-amber-300 hover:border-amber-500 hover:bg-amber-100 transition-all rounded-2xl px-7 py-4 shrink-0"
-              >
-                <Icon name="Phone" size={20} className="text-amber-600" />
-                <div>
-                  <div className="font-bold text-slate-800 text-lg">8-343-272-27-95</div>
-                  <div className="text-slate-500 text-sm">Call-центр</div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AnnouncementSection />
 
       {/* FOOTER */}
       <footer className="bg-slate-900 text-white py-10 px-6">
