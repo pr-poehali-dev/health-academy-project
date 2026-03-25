@@ -374,28 +374,42 @@ export default function Index() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 gradient-primary rounded-2xl flex items-center justify-center">
+            {/* Левая колонка — адрес + телефон + время */}
+            <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-col gap-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 gradient-primary rounded-2xl flex items-center justify-center shrink-0">
                   <Icon name="MapPin" size={22} className="text-white" />
                 </div>
                 <div>
                   <div className="font-bold text-slate-800 text-lg">Поликлиника №2</div>
-                  <div className="text-slate-500 text-sm">Адрес</div>
+                  <div className="text-slate-700 text-xl font-semibold mt-1">ул. Братьев Быковых, 16</div>
+                  <div className="text-teal-600 font-semibold text-sm mt-1">4 этаж поликлиники</div>
+                  <div className="text-slate-500 text-sm mt-1">Занятия проходят на базе поликлиники в очном формате</div>
                 </div>
               </div>
-              <p className="text-slate-700 text-xl font-semibold mb-2">ул. Братьев Быковых, 16</p>
-              <p className="text-slate-500 text-sm mb-8">Занятия проходят на базе поликлиники в очном формате</p>
 
-              <div className="bg-gradient-to-br from-slate-100 to-slate-200 rounded-2xl h-48 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-4xl mb-2">📍</div>
-                  <div className="text-slate-600 font-semibold text-sm">ул. Братьев Быковых, 16</div>
-                  <div className="text-slate-400 text-xs mt-1">Поликлиника №2</div>
+              <div className="flex items-center gap-4 bg-teal-50 border border-teal-100 rounded-2xl p-4">
+                <div className="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center shrink-0">
+                  <Icon name="Clock" size={20} className="text-teal-600" />
+                </div>
+                <div>
+                  <div className="text-slate-500 text-xs font-semibold uppercase tracking-wider">Время работы</div>
+                  <div className="font-bold text-slate-800 text-lg">8:00 — 20:00</div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 bg-indigo-50 border border-indigo-100 rounded-2xl p-4">
+                <div className="w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center shrink-0">
+                  <Icon name="Phone" size={20} className="text-indigo-600" />
+                </div>
+                <div>
+                  <div className="text-slate-500 text-xs font-semibold uppercase tracking-wider">Call-центр</div>
+                  <a href="tel:83432722795" className="font-bold text-slate-800 text-lg hover:text-indigo-600 transition-colors">8-343-272-27-95</a>
                 </div>
               </div>
             </div>
 
+            {/* Правая колонка — кабинеты + бесплатно */}
             <div className="flex flex-col gap-5">
               <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 flex-1">
                 <div className="flex items-center gap-3 mb-6">
