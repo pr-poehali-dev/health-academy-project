@@ -394,25 +394,7 @@ export default function Index() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 bg-teal-50 border border-teal-100 rounded-2xl p-4">
-                <div className="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center shrink-0">
-                  <Icon name="Clock" size={20} className="text-teal-600" />
-                </div>
-                <div>
-                  <div className="text-slate-500 text-xs font-semibold uppercase tracking-wider">Время работы</div>
-                  <div className="font-bold text-slate-800 text-lg">8:00 — 20:00</div>
-                </div>
-              </div>
 
-              <div className="flex items-center gap-4 bg-indigo-50 border border-indigo-100 rounded-2xl p-4">
-                <div className="w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center shrink-0">
-                  <Icon name="Phone" size={20} className="text-indigo-600" />
-                </div>
-                <div>
-                  <div className="text-slate-500 text-xs font-semibold uppercase tracking-wider">Call-центр</div>
-                  <a href="tel:83432722795" className="font-bold text-slate-800 text-lg hover:text-indigo-600 transition-colors">8-343-272-27-95</a>
-                </div>
-              </div>
             </div>
 
             {/* Правая колонка — кабинеты + бесплатно */}
