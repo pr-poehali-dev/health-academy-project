@@ -15,7 +15,7 @@ export default function AnnouncementSection() {
               <div className="text-amber-100 text-xs font-semibold uppercase tracking-widest mb-0.5">
                 {announcement.badge}
               </div>
-              <h2 className="font-display text-2xl font-bold text-white">
+              <h2 className="font-display text-3xl font-bold text-white">
                 {announcement.title}
               </h2>
             </div>
@@ -24,7 +24,7 @@ export default function AnnouncementSection() {
           {/* Текст объявления */}
           <div className="px-10 py-10 flex flex-col gap-5">
             {announcement.paragraphs.map((text, i) => (
-              <p key={i} className="text-slate-700 text-lg leading-relaxed">
+              <p key={i} className="text-slate-700 text-xl leading-relaxed">
                 {text}
               </p>
             ))}
@@ -32,7 +32,7 @@ export default function AnnouncementSection() {
 
           {/* Подвал */}
           <div className="border-t border-amber-100 bg-amber-50 px-10 py-7 flex flex-col sm:flex-row items-center justify-between gap-5">
-            <p className="text-slate-600 text-lg font-medium italic">
+            <p className="text-slate-600 text-xl font-medium italic">
               {announcement.closing}
             </p>
             <a
