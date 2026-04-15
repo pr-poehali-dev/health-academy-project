@@ -12,7 +12,7 @@ export default function AnnouncementSection() {
               <Icon name="FileText" size={24} className="text-white" />
             </div>
             <div>
-              <div className="text-amber-100 text-xs font-semibold uppercase tracking-widest mb-0.5">
+              <div className="text-amber-100 text-4xl font-bold mb-1">
                 {announcement.badge}
               </div>
               <h2 className="font-display text-4xl font-bold text-white">
@@ -24,7 +24,7 @@ export default function AnnouncementSection() {
           {/* Текст объявления */}
           <div className="px-10 py-10 flex flex-col gap-5">
             {announcement.paragraphs.map((text, i) => (
-              <p key={i} className="text-slate-700 text-2xl leading-relaxed">
+              <p key={i} className="text-slate-700 text-2xl leading-relaxed text-justify">
                 {text}
               </p>
             ))}
@@ -35,16 +35,30 @@ export default function AnnouncementSection() {
             <p className="text-slate-600 text-2xl font-medium italic">
               {announcement.closing}
             </p>
-            <a
-              href={announcement.phoneHref}
-              className="inline-flex items-center gap-3 bg-white border border-amber-300 hover:border-amber-500 hover:bg-amber-100 transition-all rounded-2xl px-7 py-4 shrink-0"
-            >
-              <Icon name="Phone" size={20} className="text-amber-600" />
-              <div>
-                <div className="font-bold text-slate-800 text-lg">{announcement.phone}</div>
-                <div className="text-slate-500 text-sm">Call-центр</div>
-              </div>
-            </a>
+            <div className="flex flex-col gap-3 shrink-0">
+              <a
+                href={announcement.phoneHref}
+                className="inline-flex items-center gap-3 bg-white border border-amber-300 hover:border-amber-500 hover:bg-amber-100 transition-all rounded-2xl px-7 py-4"
+              >
+                <Icon name="Phone" size={20} className="text-amber-600" />
+                <div>
+                  <div className="font-bold text-slate-800 text-lg">{announcement.phone}</div>
+                  <div className="text-slate-500 text-sm">Call-центр</div>
+                </div>
+              </a>
+              <a
+                href={announcement.websiteHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-white border border-amber-300 hover:border-amber-500 hover:bg-amber-100 transition-all rounded-2xl px-7 py-4"
+              >
+                <Icon name="Globe" size={20} className="text-amber-600" />
+                <div>
+                  <div className="font-bold text-slate-800 text-lg">{announcement.website}</div>
+                  <div className="text-slate-500 text-sm">Сайт ЦГКБ №3</div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
